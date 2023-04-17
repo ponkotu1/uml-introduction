@@ -1,0 +1,9 @@
+@startuml ユースケース図
+rectangle キャンペーン価格で予約 {
+usecase キャンペーン価格にする
+usecase (<u>予約する</u>\n拡張点\nキャンペーン中か判別する) as input
+usecase ログイン
+}
+input <. (キャンペーン価格にする) : <<extend>>
+ログイン <. input : << include >>
+@enduml
