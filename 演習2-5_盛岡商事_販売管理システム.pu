@@ -1,7 +1,7 @@
 @startuml 盛岡商事
 
 actor 出荷担当者
-rectangle 販売管理システ{
+rectangle 販売管理システム{
 usecase 注文商品をシステムで確認
 usecase 商品の出荷状況をシステムの登録
 }

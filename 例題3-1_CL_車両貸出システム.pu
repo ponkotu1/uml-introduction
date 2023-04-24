@@ -1,0 +1,37 @@
+@startuml 車両貸出システム
+skinparam classAttributeIconSize 0
+class A <<stereotype>> {}
+class 空車リスト {
+- management_id:int
+}
+class 車 {
+---
+- car_id:int
+- maker:int
+- name:String
+- drive_system:String
+- Lending_car:int
+
+}
+class 顧客 {
+- customer_id:int
+- name:String
+- tel:String
+- post:String
+- address:String
+---
++ setName(Name:String) void 
+}
+class 予約 {
+- reserve_id:int
+- management_id:int
+- customer_id:int
+- reserve_date:String
+}
+class 貸出 {
+- reserve_id:int
+- management_id:int
+- customer_id:int
+- Lending_date:String
+}
+@enduml
