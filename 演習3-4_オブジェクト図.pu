@@ -1,0 +1,12 @@
+@startuml 演習3-4-1
+object 車体
+object 左前輪タイヤ
+object 右前輪タイヤ
+object 左後輪タイヤ
+object 右後輪タイヤ
+車体 -- 左前輪タイヤ
+車体 -- 右前輪タイヤ
+車体 -- 左後輪タイヤ
+車体 -- 右後輪タイヤ
+
+@enduml
