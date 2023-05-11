@@ -1,17 +1,13 @@
 @startuml 演習4-2
 hide footbox
-actor 利用者 as customer
-participant ":ログインページ" as login
-participant ":認証モジュール" as Module
-activate customer
-customer -> login:ログインメッセージ
+participant "利用者:ログイン" as login
+participant ":予約画面" as Module
 activate login
-login -> Module:認証要請
+login -> Module:認証要請()
 activate Module
-Module -> Module:認証する
-login <-- Module:認証結果
+Module -> Module: 認証
+activate Module
+deactivate Module
 deactivate Module
 deactivate login
-customer <-- login:認証結果
-deactivate customer
 @enduml
