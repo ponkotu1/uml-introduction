@@ -3,7 +3,7 @@ hide footbox
 participant "利用者:ログイン" as login
 participant ":予約画面" as Module
 activate login
-login -> Module:認証要請()
+login ->> Module:認証要請()
 activate Module
 Module -> Module: 認証
 activate Module
