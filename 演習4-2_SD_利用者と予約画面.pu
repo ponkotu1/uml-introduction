@@ -1,0 +1,17 @@
+@startuml 演習4-2
+hide footbox
+actor 利用者 as customer
+participant ":ログインページ" as login
+participant ":認証モジュール" as Module
+activate customer
+customer -> login:ログインメッセージ
+activate login
+login -> Module:認証要請
+activate Module
+Module -> Module:認証する
+login <-- Module:認証結果
+deactivate Module
+deactivate login
+customer <-- login:認証結果
+deactivate customer
+@enduml
