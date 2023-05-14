@@ -1,0 +1,13 @@
+@startuml 課題4-3
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+participant ":データ更新コントローラ" as controller
+participant ":ホテル" as hotel
+activate controller
+controller --> hotel: 予約する
+activate hotel
+hotel --> hotel: 予約操作を呼び出す
+activate hotel
+deactivate hotel
+hotel --> ":予約": 作成する
+@enduml

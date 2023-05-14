@@ -1,11 +1,11 @@
 @startuml 演習4-2
 hide footbox
-participant "利用者:ログイン" as login
+participant "利用者:ログイン画面" as login
 participant ":予約画面" as Module
 activate login
 login ->> Module:認証要請()
 activate Module
-Module -> Module: 認証
+Module -> Module: 認証()
 activate Module
 deactivate Module
 deactivate Module
