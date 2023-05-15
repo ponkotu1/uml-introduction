@@ -1,0 +1,24 @@
+@startuml 演習4-6
+hide footbox
+actor ":登録会員" as user
+participant ":ログイン画面" as login <<boundary>>
+participant ":ログインコントローラー" as control <<control>>
+participant ":会員情報" as information
+
+activate user
+user -> login :1:ログイン情報入力(会員番号,パスワード)
+activate login
+login -> control :1:ログイン情報入力(会員番号,パスワード)
+activate control
+create information
+control -> information:1:生成<<create>>
+control -> information:1:会員情報取得<<create>>
+control <- information:登録会員情報
+activate information
+deactivate information
+deactivate control
+login <- control :ログイン成功通知
+deactivate login
+deactivate user
+
+@enduml
