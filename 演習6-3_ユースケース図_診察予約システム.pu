@@ -1,0 +1,17 @@
+
+@startuml 演習6-3
+left to right direction
+actor 利用者
+actor 看護師
+rectangle 予約システム{
+usecase メニュー画面
+usecase 予約と確認
+usecase あなたの順番
+usecase 今の順番
+}
+利用者 --> メニュー画面
+利用者 --> 予約と確認
+利用者 --> あなたの順番
+利用者 --> 今の順番
+今の順番 --> 看護師 
+@enduml
