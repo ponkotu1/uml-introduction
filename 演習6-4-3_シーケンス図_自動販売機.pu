@@ -1,0 +1,25 @@
+@startuml 演習6-4
+hide footbox
+actor ":客" as user
+participant ":料金装置" as device
+participant ":ボタン" as botton
+participant ":ベンダー装置" as bender
+
+activate user
+user -> device :料金を入れる
+activate device
+device -> botton :料金が入れられたことを確認
+activate botton
+user <-- botton
+user -> botton :ボタンを押す
+botton -> bender :選択された飲料を伝える
+activate bender
+bender -> bender:飲料を排出する
+activate bender
+deactivate bender
+bender --> user :飲料
+deactivate botton
+deactivate device
+deactivate user
+
+@enduml
