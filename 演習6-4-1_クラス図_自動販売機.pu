@@ -1,4 +1,4 @@
-@startuml 演習3-3
+@startuml 演習6-4
 left to right direction
 class 自動販売機{
 }

@@ -1,4 +1,4 @@
-@startuml 演習6-3
+@startuml 演習6-4
 left to right direction
 actor 客
 actor ベンダー

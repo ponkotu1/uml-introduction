@@ -1,4 +1,4 @@
-@startuml 診察予約
+@startuml 演習6-4
 ' left to right direction
 [*] --right-->料金投入待ち :電源ON
 state 料金投入待ち{
