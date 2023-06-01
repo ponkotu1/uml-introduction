@@ -1,0 +1,15 @@
+@startuml 演習6-5
+left to right direction
+state 電源SWがOFF{
+}
+state 電源SWがON{
+    state 右旋回{
+    }
+    state 左旋回{
+    }
+}
+電源SWがOFF --> 電源SWがON
+電源SWがOFF <-- 電源SWがON
+右旋回 --> 左旋回 :ラインから外れる
+右旋回 <-- 左旋回 :ラインを踏む
+@enduml

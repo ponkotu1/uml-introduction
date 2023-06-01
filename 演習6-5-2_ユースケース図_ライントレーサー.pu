@@ -1,0 +1,12 @@
+@startuml 演習6-4
+left to right direction
+actor 利用者
+actor 光センサー
+actor 左右のモーター
+rectangle ライントレーサーシステム{
+usecase ラインの右の線を踏む
+}
+利用者 -- ラインの右の線を踏む
+ラインの右の線を踏む -- 光センサー
+ラインの右の線を踏む -- 左右のモーター
+@enduml
